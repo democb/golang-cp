@@ -131,8 +131,8 @@ func Benchmark_Observable_1000(b *testing.B) {
 	b.ResetTimer()
 	for _, sub := range subs {
 		go func(s Subscription) {
-			for range s {
-			}
+			// for range s {
+			// }
 			wg.Done()
 		}(sub)
 	}
